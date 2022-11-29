@@ -3,47 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using Normal.Realtime;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
 
-    private PlayerControls playerControls;
 
-
-
+    private PlayerInput playerInput;
+    private InputAction pressAction;
 
     private void Awake()
     {
-        playerControls = new PlayerControls();
+        playerInput = GetComponent<PlayerInput>();
+        pressAction = playerInput.actions["press"];
+        pressAction.ReadValue<float>();
     }
 
 
-    private void OnEnable()
-    {
-        playerControls.Enable();
-    }
+    //private PlayerControls playerControls;
 
-    private void OnDisabled()
-    {
-        playerControls.Disable();
-    }
+    //private void Awake()
+    //{
+    //    playerControls = new PlayerControls();
+    //}
 
+    //private void OnEnable()
+    //{
+    //    playerControls.Enable();
+    //}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //private void OnDisabled()
+    //{
+    //    playerControls.Disable();
+    //}
 
     public void play()
     {
         Debug.Log("die");
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

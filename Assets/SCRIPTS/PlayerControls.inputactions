@@ -6,7 +6,7 @@
             "id": "6363bd2b-5df2-4c8c-80b2-f2e66355785f",
             "actions": [
                 {
-                    "name": "play",
+                    "name": "press",
                     "type": "Button",
                     "id": "f1abfc0a-fa7d-4927-86f3-3f81ebed27e7",
                     "expectedControlType": "Button",
@@ -23,7 +23,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "play",
+                    "action": "press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -34,7 +34,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "play",
+                    "action": "press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -28,7 +28,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""id"": ""6363bd2b-5df2-4c8c-80b2-f2e66355785f"",
             ""actions"": [
                 {
-                    ""name"": ""play"",
+                    ""name"": ""press"",
                     ""type"": ""Button"",
                     ""id"": ""f1abfc0a-fa7d-4927-86f3-3f81ebed27e7"",
                     ""expectedControlType"": ""Button"",
@@ -45,7 +45,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""play"",
+                    ""action"": ""press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -56,7 +56,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""play"",
+                    ""action"": ""press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -67,7 +67,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
 }");
         // Music
         m_Music = asset.FindActionMap("Music", throwIfNotFound: true);
-        m_Music_play = m_Music.FindAction("play", throwIfNotFound: true);
+        m_Music_press = m_Music.FindAction("press", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -127,12 +127,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     // Music
     private readonly InputActionMap m_Music;
     private IMusicActions m_MusicActionsCallbackInterface;
-    private readonly InputAction m_Music_play;
+    private readonly InputAction m_Music_press;
     public struct MusicActions
     {
         private @PlayerControls m_Wrapper;
         public MusicActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @play => m_Wrapper.m_Music_play;
+        public InputAction @press => m_Wrapper.m_Music_press;
         public InputActionMap Get() { return m_Wrapper.m_Music; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -142,22 +142,22 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_MusicActionsCallbackInterface != null)
             {
-                @play.started -= m_Wrapper.m_MusicActionsCallbackInterface.OnPlay;
-                @play.performed -= m_Wrapper.m_MusicActionsCallbackInterface.OnPlay;
-                @play.canceled -= m_Wrapper.m_MusicActionsCallbackInterface.OnPlay;
+                @press.started -= m_Wrapper.m_MusicActionsCallbackInterface.OnPress;
+                @press.performed -= m_Wrapper.m_MusicActionsCallbackInterface.OnPress;
+                @press.canceled -= m_Wrapper.m_MusicActionsCallbackInterface.OnPress;
             }
             m_Wrapper.m_MusicActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @play.started += instance.OnPlay;
-                @play.performed += instance.OnPlay;
-                @play.canceled += instance.OnPlay;
+                @press.started += instance.OnPress;
+                @press.performed += instance.OnPress;
+                @press.canceled += instance.OnPress;
             }
         }
     }
     public MusicActions @Music => new MusicActions(this);
     public interface IMusicActions
     {
-        void OnPlay(InputAction.CallbackContext context);
+        void OnPress(InputAction.CallbackContext context);
     }
 }
