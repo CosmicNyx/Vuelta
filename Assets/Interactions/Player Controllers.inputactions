@@ -1,0 +1,34 @@
+{
+    "name": "Player Controllers",
+    "maps": [
+        {
+            "name": "Whole Environment ",
+            "id": "fa582375-f243-40cd-8ada-51ad698f6251",
+            "actions": [
+                {
+                    "name": "Play Sound",
+                    "type": "Button",
+                    "id": "061462b4-1040-46a6-940e-6cf9027823e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3fbb7a7b-467d-4a95-b66b-b67b3301f558",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play Sound",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
