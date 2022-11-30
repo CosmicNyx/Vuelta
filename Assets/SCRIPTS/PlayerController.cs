@@ -9,15 +9,15 @@ public class PlayerController : MonoBehaviour
 {
 
 
-    private PlayerInput playerInput;
-    private InputAction pressAction;
+    //private PlayerInput playerInput;
+    //private InputAction pressAction;
 
-    private void Awake()
-    {
-        playerInput = GetComponent<PlayerInput>();
-        pressAction = playerInput.actions["press"];
-        pressAction.ReadValue<float>();
-    }
+    //private void Awake()
+    //{
+    //    playerInput = GetComponent<PlayerInput>();
+    //    pressAction = playerInput.actions["press"];
+    //    pressAction.ReadValue<float>();
+    //}
 
 
     //private PlayerControls playerControls;
@@ -37,8 +37,16 @@ public class PlayerController : MonoBehaviour
     //    playerControls.Disable();
     //}
 
-    public void play()
+    //FindObjectOfType<AudioManager>().Play("Player1");
+
+
+    public AudioSource[] soundFX;
+
+
+    public void press()
     {
+        soundFX[0].Play();
+
         Debug.Log("die");
     }
 
