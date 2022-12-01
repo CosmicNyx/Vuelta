@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public AudioSource[] soundFX;
-    int id = 1;
+    //int id = 1;
     public grabClientID clientID;
 
     //SOUND 1
@@ -17,13 +17,13 @@ public class PlayerController : MonoBehaviour
         if (clientID.playerID == 0)
         {
             soundFX[0].Play();
-            Debug.Log("Rprime - A");
+            //Debug.Log("Rprime - A");
         }
-        else if (id == 1)
+        else if (clientID.playerID == 1)
         {
             soundFX[4].Play();
         }
-        else if (id == 2)
+        else if (clientID.playerID == 2)
         {
             soundFX[8].Play();
         }
@@ -32,16 +32,16 @@ public class PlayerController : MonoBehaviour
     //SOUND 2
     public void sound2()
     {
-        if (id == 0)
+        if (clientID.playerID == 0)
         {
             soundFX[1].Play();
-            Debug.Log("Rsecond - S");
+            //Debug.Log("Rsecond - S");
         }
-        else if (id == 1)
+        else if (clientID.playerID == 1)
         {
             soundFX[5].Play();
         }
-        else if (id == 2)
+        else if (clientID.playerID == 2)
         {
             soundFX[9].Play();
         }
@@ -51,16 +51,16 @@ public class PlayerController : MonoBehaviour
     //SOUND 3
     public void sound3()
     {
-        if (id == 0)
+        if (clientID.playerID == 0)
         {
             soundFX[2].Play();
-            Debug.Log("Lprime - D");
+            //Debug.Log("Lprime - D");
         }
-        else if (id == 1)
+        else if (clientID.playerID == 1)
         {
             soundFX[6].Play();
         }
-        else if (id == 2)
+        else if (clientID.playerID == 2)
         {
             soundFX[10].Play();
         }
@@ -70,16 +70,16 @@ public class PlayerController : MonoBehaviour
     //SOUND 4
     public void sound4()
     {
-        if (id == 0)
+        if (clientID.playerID == 0)
         {
             soundFX[3].Play();
-            Debug.Log("Lsecond - F");
+            //Debug.Log("Lsecond - F");
         }
-        else if (id == 1)
+        else if (clientID.playerID == 1)
         {
             soundFX[7].Play();
         }
-        else if (id == 2)
+        else if (clientID.playerID == 2)
         {
             soundFX[11].Play();
         }

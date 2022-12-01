@@ -123,7 +123,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""36fbb3d3-b354-4554-a228-af1a7ee99912"",
-                    ""path"": ""<XRController>{LeftHand}/primaryTouch"",
+                    ""path"": ""<XRController>/primaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
