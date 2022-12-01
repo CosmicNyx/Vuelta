@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 7005289866914559585}
   - component: {fileID: 3261996886568207663}
   - component: {fileID: 2658980736435865195}
+  - component: {fileID: 8351961162375642336}
   m_Layer: 0
   m_Name: CustomVRAvatar
   m_TagString: Untagged
@@ -752,6 +753,20 @@ MonoBehaviour:
   _syncScale: 1
   _syncVelocity: 1
   _maintainOwnershipWhileSleeping: 0
+--- !u!114 &8351961162375642336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365140136517554562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f377967d399fc648925054374aec300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 0
+  _realtime: {fileID: 0}
 --- !u!1 &8374175436879084362
 GameObject:
   m_ObjectHideFlags: 0
