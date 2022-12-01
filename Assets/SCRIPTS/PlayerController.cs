@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     //SOUND 2
     public void sound2()
     {
+        soundFX[0].Play();
         Debug.Log("Rsecond - S");
     }
 
