@@ -9,11 +9,12 @@ public class PlayerController : MonoBehaviour
 {
     public AudioSource[] soundFX;
     int id = 1;
+    public grabClientID clientID;
 
     //SOUND 1
     public void sound1()
     {
-        if (id == 0)
+        if (clientID.playerID == 0)
         {
             soundFX[0].Play();
             Debug.Log("Rprime - A");
