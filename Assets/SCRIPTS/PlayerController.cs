@@ -7,47 +7,31 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-
-
-    //private PlayerInput playerInput;
-    //private InputAction pressAction;
-
-    //private void Awake()
-    //{
-    //    playerInput = GetComponent<PlayerInput>();
-    //    pressAction = playerInput.actions["press"];
-    //    pressAction.ReadValue<float>();
-    //}
-
-
-    //private PlayerControls playerControls;
-
-    //private void Awake()
-    //{
-    //    playerControls = new PlayerControls();
-    //}
-
-    //private void OnEnable()
-    //{
-    //    playerControls.Enable();
-    //}
-
-    //private void OnDisabled()
-    //{
-    //    playerControls.Disable();
-    //}
-
-    //FindObjectOfType<AudioManager>().Play("Player1");
-
-
     public AudioSource[] soundFX;
 
-
-    public void press()
+    //SOUND 1
+    public void sound1()
     {
         soundFX[0].Play();
+        Debug.Log("Rprime - A");
+    }
 
-        Debug.Log("die");
+    //SOUND 2
+    public void sound2()
+    {
+        Debug.Log("Rsecond - S");
+    }
+
+    //SOUND 3
+    public void sound3()
+    {
+        Debug.Log("Lprime - D");
+    }
+
+    //SOUND 4
+    public void sound4()
+    {
+        Debug.Log("Lsecond - F");
     }
 
 }
