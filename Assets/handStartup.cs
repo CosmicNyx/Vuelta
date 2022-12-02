@@ -16,12 +16,16 @@ public class handStartup : MonoBehaviour
         //-----------------------
         foreach (Transform child in transform)
         {
-            if (clientID.playerID == 0 && child.gameObject.name == "hand1")
+            if (clientID.playerID == 0 && child.gameObject.name == "player1")
             {
                 child.gameObject.SetActive(true);
                 //leftHand.gameObject.SetActive(false);
             }
-            else if (clientID.playerID == 1 && child.gameObject.name == "hand2")
+            else if (clientID.playerID == 1 && child.gameObject.name == "player2")
+            {
+                child.gameObject.SetActive(true);
+            }
+            else if (clientID.playerID == 2 && child.gameObject.name == "player3")
             {
                 child.gameObject.SetActive(true);
             }
