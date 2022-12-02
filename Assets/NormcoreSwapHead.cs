@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class NormcoreSwapHead : MonoBehaviour
 {
-    public string objectName; 
+    public string objectName;
+
+    public grabClientID clientID;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (Transform child in transform)
+        {
+            if (clientID.playerID == 0 && child.gameObject.name == "head4")
+            {
+                child.gameObject.SetActive(true);
+                //leftHand.gameObject.SetActive(false);
+            }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("head"))
-        {
-            other.GetComponent<MeshRenderer>().enabled = false;
-
-            foreach (Transform child in other.transform)
-            {
-                if (child.gameObject.name == objectName)
-                {
-                    child.gameObject.SetActive(true);
-                }
-                else child.gameObject.SetActive(false);
-            }
-        }
-    }
+    
 }
